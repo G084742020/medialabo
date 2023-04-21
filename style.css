@@ -1,0 +1,18 @@
+h1  {
+    background-color: #7f7fcf;
+	text-shadow: navy;
+	color: white;
+}
+
+h2 {
+    color: navy;
+}
+
+h3 {
+    background-color: darkslategray;
+    color: white;
+}
+
+div {
+    background-color: aliceblue;
+}
