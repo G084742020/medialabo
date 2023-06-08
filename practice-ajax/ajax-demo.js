@@ -5,7 +5,7 @@ b.addEventListener('click', sendRequest);
 // 通信を開始する処理
 function sendRequest() {
 	// URL を設定
-	let url = 'https://www.nishita-lab.org/web-contents/jsons/test.json';
+	let url = 'https://www.nishita-lab.org/web-contents/jsons/hotpepper/G006.json';
 
 	// 通信開始
 	axios.get(url)
@@ -20,15 +20,8 @@ function showResult(resp) {
 	let data = resp.data;
 
 	// data が文字列型なら，オブジェクトに変換する
-	if (typeof data === 'string') {
-		data = JSON.parse(data);
-	}
-
 	// data をコンソールに出力
-	console.log(data);
-
-	// data.x を出力
-	console.log(data.x);
+	console.log(data.results.shop[0].access);
 }
 
 // 通信エラーが発生した時の処理

@@ -36,7 +36,7 @@ div_phototable.insertAdjacentElement('beforeend', p2_img);
 
 let p3_img = document.createElement('p');
 let img3 = document.createElement('img');
-img3.setAttribute('src', 'jiro.png');
+img3.setAttribute('src', 'hanako.png');
 p3_img.insertAdjacentElement('beforeend', img3);
 div_phototable.insertAdjacentElement('beforeend', p3_img);
 
