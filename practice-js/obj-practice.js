@@ -1,28 +1,18 @@
-//////////////// ここは書き換えてはいけない！ 
+let b = document.querySelector('button#btn');
+b.addEventListener('click', showSelectResult);
 
-let campus = {
-	address: "八王子市館町",
-	buildingD: ["D101", "D102", "D103", "D201", "D202", "D203", "D204", "D205"],
-	lon: 35.624869704425,
-	lat: 139.28201056633
-};
+function showSelectResult() {
+    let s = document.querySelector('select#santaro');
+    let idx = s.selectedIndex;  // idx 番目の option が選択された
 
-let gakka = [
-	{name: "機械システム工学科", ename: "Department of Mechanical Systems Engineering"},
-	{name: "電子システム工学科", ename: "Department of Electronics and Computer Systems"},
-	{name: "情報工学科", ename: "Department of Computer Science"},
-	{name: "デザイン学科", ename: "Department of Design"}
-];
+    let os = s.querySelectorAll('option');  // s の子要素 option をすべて検索
+    let o = os.item(idx);       // os の idx 番目の要素
 
-//////////////// ここから下にプログラムを書きたそう!
-
-console.log(campus.address);
-
-for(let n of campus.buildingD) {
-	console.log(n);
+    console.log('選択された ' + idx + ' 番目の option の情報:');
+    console.log('  value=' + o.getAttribute('value'));  // id 属性を表示
+    console.log('  textContent='+o.textContent);
 }
 
-for(let n of gakka) {
-	console.log(n.name);
-}
+let a = document.querySelector('th#name');
+a.textContent = data.name;
 
